@@ -1,10 +1,10 @@
-package com.haxe.requirements;
+package com.haxe.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RequirementsApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {
