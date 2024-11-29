@@ -1,7 +1,6 @@
 package com.haxe.backend.project;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.haxe.backend.utilities.Sort;
+
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/projects")
@@ -33,8 +34,9 @@ public class ProjectController {
     }
 
     @GetMapping("{id}")
-    public Optional<Project> getProjectById(@PathVariable("id") int id) {
-        return projectService.getProjectById(id);
+    public ResponseEntity<Project> getProjectById(@PathVariable("id") int id) {
+        Project project = projectService.getProjectById(id);
+        return ResponseEntity.ok().body(project);
     }
 
     @DeleteMapping("{id}")
@@ -43,12 +45,12 @@ public class ProjectController {
     }
 
     @PostMapping
-    public void addProject(@RequestBody Project project) {
+    public void addProject(@Valid @RequestBody Project project) {
         projectService.addProject(project);
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<String> updateProject(@PathVariable("id") Integer id, @RequestBody Project project) {
+    public ResponseEntity<String> updateProject(@PathVariable("id") Integer id, @Valid @RequestBody Project project) {
         projectService.updateProject(id, project);
         return ResponseEntity.ok().build();
     }
