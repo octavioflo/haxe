@@ -43,5 +43,17 @@ public class ProjectService {
     }
 
     public void updateProject(Integer id, Project project) {
+        Project existingProject = projectRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Project with this id does not exist."));
+
+        if (!existingProject.getName().equals(project.getName()) && projectRepository.existsByName(project.getName())) {
+            throw new DuplicateResourceException("Project name is already taken.");
+        }
+
+        existingProject.setName(project.getName());
+        existingProject.setProduct(project.getProduct());
+        existingProject.setLanguage(project.getLanguage());
+
+        projectRepository.save(existingProject);
     }
 }
