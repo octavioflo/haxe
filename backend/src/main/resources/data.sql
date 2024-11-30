@@ -1,68 +1,69 @@
 -- Insert 30 projects into the `Project` table
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (1, 'Project Alpha', 'Product A', 'JAVA');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (2, 'Project Beta', 'Product B', 'PYTHON');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (3, 'Project Gamma', 'Product C', 'SWIFT');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (4, 'Project Delta', 'Product D', 'GO');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (5, 'Project Epsilon', 'Product E', 'RUBY');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (6, 'Project Zeta', 'Product F', 'JAVA');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (7, 'Project Eta', 'Product G', 'PYTHON');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (8, 'Project Theta', 'Product H', 'SWIFT');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (9, 'Project Iota', 'Product I', 'GO');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (10, 'Project Kappa', 'Product J', 'RUBY');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (11, 'Project Lambda', 'Product K', 'JAVA');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (12, 'Project Mu', 'Product L', 'PYTHON');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (13, 'Project Nu', 'Product M', 'SWIFT');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (14, 'Project Xi', 'Product N', 'GO');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (15, 'Project Omicron', 'Product O', 'RUBY');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (16, 'Project Pi', 'Product P', 'JAVA');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (17, 'Project Rho', 'Product Q', 'PYTHON');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (18, 'Project Sigma', 'Product R', 'SWIFT');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (19, 'Project Tau', 'Product S', 'GO');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (20, 'Project Upsilon', 'Product T', 'RUBY');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (21, 'Project Phi', 'Product U', 'JAVA');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (22, 'Project Chi', 'Product V', 'PYTHON');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (23, 'Project Psi', 'Product W', 'SWIFT');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (24, 'Project Omega', 'Product X', 'GO');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (25, 'Project Alpha Prime', 'Product Y', 'RUBY');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (26, 'Project Beta Prime', 'Product Z', 'JAVA');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (
-        27,
-        'Project Gamma Prime',
-        'Product AA',
-        'PYTHON'
-    );
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (28, 'Project Delta Prime', 'Product BB', 'SWIFT');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (29, 'Project Epsilon Prime', 'Product CC', 'GO');
-INSERT INTO PROJECT (ID, NAME, PRODUCT, LANGUAGE)
-VALUES (30, 'Project Zeta Prime', 'Product DD', 'RUBY');
+INSERT INTO PROJECT (ID, NAME, PRODUCT)
+VALUES (1, 'Project Alpha', 'Product A'),
+    (2, 'Project Beta', 'Product B'),
+    (3, 'Project Gamma', 'Product C'),
+    (4, 'Project Delta', 'Product D'),
+    (5, 'Project Epsilon', 'Product E'),
+    (6, 'Project Zeta', 'Product F'),
+    (7, 'Project Eta', 'Product G'),
+    (8, 'Project Theta', 'Product H'),
+    (9, 'Project Iota', 'Product I'),
+    (10, 'Project Kappa', 'Product J'),
+    (11, 'Project Lambda', 'Product K'),
+    (12, 'Project Mu', 'Product L'),
+    (13, 'Project Nu', 'Product M'),
+    (14, 'Project Xi', 'Product N'),
+    (15, 'Project Omicron', 'Product O'),
+    (16, 'Project Pi', 'Product P'),
+    (17, 'Project Rho', 'Product Q'),
+    (18, 'Project Sigma', 'Product R'),
+    (19, 'Project Tau', 'Product S'),
+    (20, 'Project Upsilon', 'Product T'),
+    (21, 'Project Phi', 'Product U'),
+    (22, 'Project Chi', 'Product V'),
+    (23, 'Project Psi', 'Product W'),
+    (24, 'Project Omega', 'Product X'),
+    (25, 'Project Alpha2', 'Product Y'),
+    (26, 'Project Beta2', 'Product Z'),
+    (27, 'Project Gamma2', 'Product AA'),
+    (28, 'Project Delta2', 'Product BB'),
+    (29, 'Project Epsilon2', 'Product CC'),
+    (30, 'Project Zeta2', 'Product DD');
+
+-- Insert corresponding languages into the `Language` table
+INSERT INTO LANGUAGE (PROJECT_ID, LANGUAGE)
+VALUES (1, 'JAVA'),
+    (2, 'PYTHON'),
+    (3, 'SWIFT'),
+    (4, 'GO'),
+    (5, 'RUBY'),
+    (6, 'JAVA'),
+    (7, 'PYTHON'),
+    (8, 'SWIFT'),
+    (9, 'GO'),
+    (10, 'RUBY'),
+    (11, 'JAVA'),
+    (12, 'PYTHON'),
+    (13, 'SWIFT'),
+    (14, 'GO'),
+    (15, 'RUBY'),
+    (16, 'JAVA'),
+    (17, 'PYTHON'),
+    (18, 'SWIFT'),
+    (19, 'GO'),
+    (20, 'RUBY'),
+    (21, 'JAVA'),
+    (22, 'PYTHON'),
+    (23, 'SWIFT'),
+    (24, 'GO'),
+    (25, 'RUBY'),
+    (26, 'JAVA'),
+    (27, 'PYTHON'),
+    (28, 'SWIFT'),
+    (29, 'GO'),
+    (30, 'RUBY');
+
+-- Restart the ID sequence for the `Project` table
 ALTER TABLE project
 ALTER COLUMN id RESTART WITH 31;

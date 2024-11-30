@@ -37,7 +37,16 @@ public class ProjectService {
         if (projectRepository.existsByName(project.getName())) {
             throw new DuplicateResourceException("Project name is already taken.");
         }
-        Project newProject = new Project(project.getName(), project.getProduct(), project.getLanguage());
+        Project newProject = new Project(
+                project.getName(),
+                project.getProduct(),
+                project.getLanguage(),
+                project.getProjectOwner(),
+                project.getBusinessCriticality(),
+                project.getRepoUrl(),
+                project.getEnvironment(),
+                null,
+                project.getSecurityTools());
 
         projectRepository.save(newProject);
     }
@@ -53,6 +62,12 @@ public class ProjectService {
         existingProject.setName(project.getName());
         existingProject.setProduct(project.getProduct());
         existingProject.setLanguage(project.getLanguage());
+        existingProject.setBusinessCriticality(project.getBusinessCriticality());
+        existingProject.setProjectOwner(project.getProjectOwner());
+        existingProject.setRepoUrl(project.getRepoUrl());
+        existingProject.setEnvironment(project.getEnvironment());
+        existingProject.setRequirements(project.getRequirements());
+        existingProject.setSecurityTools(project.getSecurityTools());
 
         projectRepository.save(existingProject);
     }
